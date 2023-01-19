@@ -28,6 +28,29 @@ public class HuffCompression {
             byte[] huffmanCodeBytes = zipBytesWithCodes(bytes, huffmanCodes);
             return huffmanCodeBytes;
         }
+
+        private static MinPriorityQueue<ByteNode> getByteNodes(byte[] bytes) {
+            MinPriorityQueue<ByteNode> nodes = new MinPriorityQueue<ByteNode>();
+            Map<Byte, Integer> tempMap = new HashMap<>();
+            for (byte b : bytes) {
+                Integer value = tempMap.get(b);
+                if (value == null)
+                    tempMap.put(b, 1);
+                else
+                    tempMap.put(b, value + 1);
+            }
+            for (Map.Entry<Byte, Integer> entry : tempMap.entrySet())
+                nodes.add(new ByteNode(entry.getKey(), entry.getValue()));
+            return nodes;
+        }
+
+        private static ByteNode createHuffmanTree(MinPriorityQueue<ByteNode> nodes) {
+            while (nodes.len() > 1) {
+                ByteNode left = nodes.poll();
+                ByteNode right = nodes.poll();
+
+            }
+        }
 }
 
 
