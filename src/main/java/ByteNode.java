@@ -9,7 +9,7 @@ public class ByteNode implements Comparable<ByteNode> {
             this.data = data;
             this.frequency = weight;
         }
-        
+
         public int compareTo(ByteNode o) {
             return 0;
         }
