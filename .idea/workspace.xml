@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cff54518-2934-4527-9308-4a89d545ad29" name="Changes" comment="Initial Checkpoint">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ByteNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ByteNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HuffCompression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HuffCompression.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MinPriorityQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MinPriorityQueue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
