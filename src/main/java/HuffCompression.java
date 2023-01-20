@@ -17,7 +17,7 @@ public class HuffCompression {
             objectOutStream.writeObject(huffmap);
             inStream.close();
             objectOutStream.close();
-            outStream.close;
+            outStream.close();
         } catch (Exception e) {
             e.printStackTrace(); }
         }
@@ -30,7 +30,7 @@ public class HuffCompression {
         }
 
         private static MinPriorityQueue<ByteNode> getByteNodes(byte[] bytes) {
-            MinPriorityQueue<ByteNode> nodes = new MinPriorityQueue<ByteNode>();
+            MinPriorityQueue<ByteNode> nodes = new MinPriorityQueue<>();
             Map<Byte, Integer> tempMap = new HashMap<>();
             for (byte b : bytes) {
                 Integer value = tempMap.get(b);
@@ -126,9 +126,31 @@ public class HuffCompression {
                 boolean flag = true;
                 Byte b = null;
                 while (flag) {
-                    String key = sb1.substring()
+                    String key = sb1.substring(i, i + count);
+                    b = map.get(key);
+                    if (b == null) count++;
+                    else flag = false;
                 }
+                list.add(b);
+                i += count;
             }
+            byte b[] = new byte[list.size()];
+            for (int i = 0; i < b.length; i++)
+                b[i] = list.get(i);
+            return b;
+        }
+
+        private static String convertbyteInBit(boolean flag, byte b) {
+            int curByte = b;
+            if (flag) curByte|=256;
+            String str0 = Integer.toBinaryString(curByte);
+            if (flag || curByte < 0)
+                return str0.substring(str0.length() - 8);
+            else return str0;
+        }
+
+        public static void main(String[] args) {
+            compress("C:\\Users\\omarh\\Desktop\\text.txt", "C:\\Users\\omarh\\Desktop\\compressed.txt");
         }
 }
 

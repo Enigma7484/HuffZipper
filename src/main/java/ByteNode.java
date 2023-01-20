@@ -11,6 +11,6 @@ public class ByteNode implements Comparable<ByteNode> {
         }
 
         public int compareTo(ByteNode o) {
-            return 0;
+            return this.frequency - o.frequency;
         }
 }
